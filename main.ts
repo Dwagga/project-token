@@ -3,8 +3,9 @@
 namespace centrifuge {
 
 //% help=pins/servo-write-pin weight=20
-//% blockId=device_set_servo_pin block="servo write|pin %mypin|to %value" blockGap=8
+//% blockId=device_set_servo_pin block="Centrifuge at %value during %time" blockGap=8
 //% parts=microservo trackArgs=0
+//% mypin="D13"
 //% value.min=0 value.max=180
 //% mypin.fieldEditor="gridpicker" mypin.fieldOptions.columns=6
 //% mypin.fieldOptions.tooltips="false" mypin.fieldOptions.width="250"
