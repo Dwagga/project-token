@@ -22,7 +22,7 @@ export function servo(mypin:PwmOnlyPin ,value: number): void {
 //% block="Start the centrifuge" blockGap=8
 //% weight=100 color=#FFA533
 export function Start_centrifuge(): void {
-  PwmOnlyPin pin = "D13"
+  PwmOnlyPin pin = "D13";
   pin.servoWrite(150)
   pause(7000)
 }
