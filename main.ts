@@ -1,4 +1,4 @@
-//% weight=100 color=#0fbc11 icon=“”
+//% weight=100 color=#0fbc11 icon=U+1f74e
 
 namespace centrifuge {
   
@@ -20,10 +20,9 @@ export function servo(mypin:PwmOnlyPin ,value: number): void {
 }
   
 //% help=pins/servo-write-pin weight=20
-//% block="Start the centrifuge || pin: %mypin value:%value" blockGap=8
-//% parts=microservo trackArgs=0
 //% mypin.deft="D13"
 //% value.deft=150
+//% block="Start the centrifuge || pin: %mypin value:%value" blockGap=8
 //% weight=100 color=#0fbc11
 export function Start_centrifuge(mypin:PwmOnlyPin ,value: number): void {
   mypin.servoWrite(value)
