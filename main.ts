@@ -25,7 +25,7 @@ export function servo(mypin:PwmOnlyPin ,value: number): void {
 //% mypin="D13"
 //% value=150
 //% weight=100 color=#0fbc11
-export function servo(mypin:PwmOnlyPin ,value: number): void {
+export function Start_centrifuge(mypin:PwmOnlyPin ,value: number): void {
   mypin.servoWrite(value)
   pause(7000)
 }
