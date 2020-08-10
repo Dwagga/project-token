@@ -1,4 +1,4 @@
-//% weight=100 color=#0fbc11 icon=U+1f74e
+//% weight=100 color=#0fbc11 icon=🝎
 
 namespace centrifuge {
   
@@ -19,6 +19,11 @@ export function servo(mypin:PwmOnlyPin ,value: number): void {
   mypin.servoWrite(value)
 }
   
+/**
+ * Pause for the specified time in milliseconds
+ * @param value, eg: 150
+ * @param mypin, eg: D13
+ */
 //% help=pins/servo-write-pin weight=20
 //% mypin.deft="D13"
 //% value.deft=150
