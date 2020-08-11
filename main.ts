@@ -14,9 +14,7 @@ function pause(ms: number): void {
 //% mypin.fieldOptions.tooltips="false" mypin.fieldOptions.width="250"
 //% weight=100 color=#FF5733
 export function dwagga(value: number): void {
-  var X: PwmOnlyPin;
-  X="D13";
-  X.servoWrite(value)
+  PIN_LED.servoWrite(value)
 }
   
 /*
