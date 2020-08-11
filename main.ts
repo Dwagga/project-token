@@ -6,7 +6,6 @@ function pause(ms: number): void {
     loops.pause(ms);
 }
 
-//% help=pins/servo-write-pin weight=20
 //% block="Centrifugue: servo write|pin %mypin|to %value" blockGap=8
 //% value.min=0 value.max=180
 //% mypin.defl=D13
@@ -14,9 +13,10 @@ function pause(ms: number): void {
 //% mypin.fieldEditor="gridpicker" mypin.fieldOptions.columns=6
 //% mypin.fieldOptions.tooltips="false" mypin.fieldOptions.width="250"
 //% weight=100 color=#FF5733
-export function servo(mypin:PwmOnlyPin ,value: number): void {
-
-  mypin.servoWrite(value)
+export function dwagga(value: number): void {
+  var X: PwmOnlyPin;
+  X="D13";
+  X.servoWrite(value)
 }
   
 /*
