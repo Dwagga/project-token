@@ -2,9 +2,9 @@
 namespace centrifuge {
   
 enum potency {
-    100,
-    120,
-    140
+    "100",
+    "120",
+    "140"
 }
   
 //% help=loops/pause weight=99
