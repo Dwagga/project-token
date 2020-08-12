@@ -1,25 +1,23 @@
 //% weight=100 color=#FF5733 icon=\2707
 namespace centrifuge {
   
-enum potency {
-    100_RPM,
-    120_RPM,
-    130_RPM
-}
+/*enum potency {
+    100_RPM = 100,
+    120_RPM = 120,
+    130_RPM = 130
+}*/
   
 //% help=loops/pause weight=99
 function pause(ms: number): void {
     loops.pause(ms);
 }
 
-//% block="Centrifugue at |pin %mypin|to %value" blockGap=8
+//% block="Centrifugue at %value" blockGap=8
 //% value.min=0 value.max=180
 //% value.defl=160
-//% mypin.fieldEditor="gridpicker" mypin.fieldOptions.columns=6
-//% mypin.fieldOptions.tooltips="false" mypin.fieldOptions.width="250"
 //% weight=100 color=#FF5733
 export function dwagga(value: potency): void {
-  mypin.servoWrite(value)
+  pins.D13.servoWrite(value)
 }
   
 /*
