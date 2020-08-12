@@ -16,7 +16,7 @@ function pause(ms: number): void {
 //% value.min=0 value.max=180
 //% value.defl=160
 //% weight=100 color=#FF5733
-export function dwagga(value: potency): void {
+export function dwagga(value: number): void {
   pins.D13.servoWrite(value)
 }
   
