@@ -14,8 +14,8 @@ function pause(ms: number): void {
 
 
 //% block="Run the centrifugue at %value during %duration" blockGap=8
-//% duration.fieldOptions.value='[["5 seconds"], ["10 seconds"], ["30 seconds"], ["1 minute"]]'
-//% value.fieldOptions.value='[["3.000 RPM"], ["6.000 RPM"], ["10.000 RPM"], ["14.000 RPM"]]'
+//% duration.fieldOptions.value="5 seconds", "10 seconds"
+//% value.fieldOptions.value="3.000 RPM", "6.000 RPM"
 //% weight=100 color=#FF5733
 export function run_centrifuge(value: string, duration: string): void {
 
