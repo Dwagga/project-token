@@ -15,7 +15,7 @@ function pause(ms: number): void {
 
 //% block="Run the centrifugue at %value during %duration" blockGap=8
 //% duration.shadow=timePicker
-//% value.fieldEditor="numberdropdown" value.fieldOptions.decompileLiterals=true
+//% value.fieldEditor="textdropdown" value.fieldOptions.decompileLiterals=true
 //% value.fieldOptions.data='[["XX0", 100], ["XX1", 110], ["XX2", 120], ["XX3", 130]]'
 //% value.defl=100
 //% weight=100 color=#FF5733
