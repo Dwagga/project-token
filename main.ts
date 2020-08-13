@@ -12,16 +12,10 @@ function pause(ms: number): void {
     loops.pause(ms);
 }
 
-/**
-   * Run a motor
-   * @param value description,
-   *      eg: 100, 110, 120
-   * @param duration description,
-   *      eg: 2000
-   */
+
 //% block="Run the centrifugue at %value during %duration" blockGap=8
 //% duration.shadow=timePicker
-//% value.min=0 value.max=180
+//% value.fieldOptions.data='[["XX0", 100], ["XX1", 110], ["XX2", 120], ["XX3", 130]]'
 //% value.defl=100
 //% weight=100 color=#FF5733
 export function run_centrifuge(value: number): void {
