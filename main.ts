@@ -12,11 +12,19 @@ function pause(ms: number): void {
     loops.pause(ms);
 }
 
-//% block="Centrifugue at %value" blockGap=8
+/**
+   * Run a motor
+   * @param value description,
+   *      eg: 100, 110, 120
+   * @param duration description,
+   *      eg: 2000
+   */
+//% block="Run the centrifugue at %value during %duration" blockGap=8
+//% duration.shadow=timePicker
 //% value.min=0 value.max=180
-//% value.defl=160
+//% value.defl=100
 //% weight=100 color=#FF5733
-export function dwagga(value: number): void {
+export function run_centrifuge(value: number): void {
   pins.D13.servoWrite(value)
 }
   
