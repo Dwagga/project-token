@@ -30,7 +30,7 @@ enum centrifugation_times {
     onehour
 }
 
-//% weight=100 color=#FF5733 icon=\e059
+//% weight=100 color=#FF5733 icon="\f140"
 namespace centrifuge {
 
 //% block="Start the centrifuge" blockGap=8
@@ -46,7 +46,7 @@ export function Start_centrifuge(): void {
  * @param time, centrifugation time eg: centrifugation_times.tenseconds
  */
 //% block="Run the centrifugue at %value during %time" blockGap=8
-//% weight=500 color=#FF5733
+//% weight=90 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     
      switch(value) {
