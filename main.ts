@@ -12,13 +12,18 @@ function pause(ms: number): void {
     loops.pause(ms);
 }
 
-
+enum AlarmSound {
+    //% block="annoy"
+    Annoy,
+    //% block="alert"
+    Alert
+}
+  
 //% block="Run the centrifugue at %value during" blockGap=8
 //% value.defl="nullvalue"
-//% value.fieldEditor="textdropdown"
-//% value.fieldOptions.values= hello, bye
+//% expandableArgumentMode="toggle"
 //% weight=100 color=#FF5733
-export function run_centrifuge(value: string): void {
+export function run_centrifuge(value: AlarmSound): void {
 
   //pins.D13.servoWrite(value)
 }
