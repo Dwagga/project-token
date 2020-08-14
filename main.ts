@@ -41,20 +41,19 @@ function pause(ms: number): void {
  * @param time, eg: centrifugation_times.tenseconds
  */
 //% block="Run the centrifugue at %value during %time" blockGap=8
-//% weight=100 color=#FF5733
+//% weight=500 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
 
   //pins.D13.servoWrite(value)
 }
   
-/*
+
 //% block="Start the centrifuge" blockGap=8
 //% weight=100 color=#FFA533
 export function Start_centrifuge(): void {
-  var D13: PwmOnlyPin;
-  D13.servoWrite(150)
-  pause(7000)
+  pins.D13.setServoPulseUs(1000)
+  pause(5000)
 }
-  */
+  
 }
 
