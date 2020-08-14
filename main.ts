@@ -30,7 +30,7 @@ enum centrifugation_times {
     onehour
 }
 
-//% weight=100 color=#FF5733 icon=\uf1ec
+//% weight=100 color=#FF5733 icon=\e059
 namespace centrifuge {
 
 //% block="Start the centrifuge" blockGap=8
