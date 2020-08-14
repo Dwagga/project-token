@@ -18,12 +18,16 @@ enum AlarmSound {
     //% block="alert"
     Alert
 }
-  
+
+/**
+ * Play an alarm sound for some time
+ * @param value of the alarm to play, eg: AlarmSound.Annoy
+ */
 //% block="Run the centrifugue at %value during" blockGap=8
 //% value.defl="nullvalue"
 //% expandableArgumentMode="toggle"
 //% weight=100 color=#FF5733
-export function run_centrifuge(value: AlarmSound): void {
+export function run_centrifuge(value?: AlarmSound): void {
 
   //pins.D13.servoWrite(value)
 }
