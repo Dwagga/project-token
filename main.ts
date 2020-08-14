@@ -51,11 +51,11 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     
     switch(time) {
         case centrifugation_times.tenseconds: 
-            pause(5000)
+            pause(10*1000)
             pins.D13.servoWrite(0)
             ;
         case centrifugation_times.twentiseconds: 
-            pause(5000)
+            pause(20*1000)
             pins.D13.servoWrite(0)
             ;
         case centrifugation_times.thirtyseconds: pause(2000);
