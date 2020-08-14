@@ -17,23 +17,21 @@ enum centrifugation_times{
     //% block="30 seconds"
     thirtyseconds,
     //% block="1 minute"
-    oneminute
+    oneminute,
+    //% block="2 minutes"
+    twominutes,
+    //% block="5 minutes"
+    fiveminutes,
+    //% block="10 minutes"
+    tenminutes,
+    //% block="30 minutes"
+    thirtyminutes,
+    //% block="1 hour"
+    onehour
 }
 
 //% weight=100 color=#FF5733 icon=\uf1ec
 namespace centrifuge {
-  
-/*enum potency {
-    100_RPM = 100,
-    120_RPM = 120,
-    130_RPM = 130
-}*/
-  
-//% help=loops/pause weight=99
-function pause(ms: number): void {
-    loops.pause(ms);
-}
-
 
 /**
  * Play an alarm sound for some time
@@ -43,13 +41,37 @@ function pause(ms: number): void {
 //% block="Run the centrifugue at %value during %time" blockGap=8
 //% weight=500 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
+    
+    var cent_time_sec: number;
+    switch(time) {
+        case centrifugation_times.tenseconds: cent_time = (10*1000);
+        case centrifugation_times.twentiseconds: cent_time = (20*1000);
+        case centrifugation_times.thirtyseconds: cent_time = (30*1000);
+        case centrifugation_times.oneminute: cent_time = (1*60*1000);
+        case centrifugation_times.twominutes: cent_time = (2*60*1000);
+        case centrifugation_times.fiveminutes: cent_time = (5*60*1000);
+        case centrifugation_times.tenminutes: cent_time = (10*60*1000);
+        case centrifugation_times.thirtyminutes: cent_time = (30*60*1000);
+        case centrifugation_times.onehour: cent_time = (60*60*1000);
+    }
+    
     switch(value) {
         case RPM.fiverpm:
             pins.D13.servoWrite(110)
+            pause(cent_time)
         ;
-        case RPM.eigthrpm: pins.D13.servoWrite(120);
-        case RPM.tenrpm: pins.D13.servoWrite(130);
-        case RPM.twelverpm: pins.D13.servoWrite(140);    
+        case RPM.eigthrpm: 
+            pins.D13.servoWrite(120);
+            pause(cent_time)
+        ;
+        case RPM.tenrpm: 
+            pins.D13.servoWrite(130);
+            pause(cent_time)
+        ;
+        case RPM.twelverpm: 
+            pins.D13.servoWrite(140);   
+            pause(cent_time)
+        ;
     }
 }
   
