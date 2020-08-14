@@ -42,27 +42,25 @@ namespace centrifuge {
 //% weight=500 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     
-    /*var cent_time_sec: number;
-    switch(time) {
-        case centrifugation_times.tenseconds: cent_time_sec = 10;
-        case centrifugation_times.twentiseconds: cent_time_sec = 20;
-        case centrifugation_times.thirtyseconds: cent_time_sec = 30;
-        case centrifugation_times.oneminute: cent_time_sec = 1;
-        case centrifugation_times.twominutes: cent_time_sec = 2;
-        case centrifugation_times.fiveminutes: cent_time_sec = 5;
-        case centrifugation_times.tenminutes: cent_time_sec = 10;
-        case centrifugation_times.thirtyminutes: cent_time_sec = 30;
-        case centrifugation_times.onehour: cent_time_sec = 60;
-    }*/
-    
-    switch(value) {
+     switch(value) {
         case RPM.fiverpm: pins.D13.servoWrite(110);
         case RPM.eigthrpm: pins.D13.servoWrite(120);
         case RPM.tenrpm: pins.D13.servoWrite(130);
         case RPM.twelverpm: pins.D13.servoWrite(140);   
     }
-    pause(5000);
-    pins.D13.servoWrite(0);
+    
+    switch(time) {
+        case centrifugation_times.tenseconds: pause(10*1000);
+        case centrifugation_times.twentiseconds: pause(20*1000);
+        case centrifugation_times.thirtyseconds: pause(30*1000);
+        case centrifugation_times.oneminute: pause(1*60*1000);
+        case centrifugation_times.twominutes: pause(2*60*1000);
+        case centrifugation_times.fiveminutes: pause(5*60*1000);
+        case centrifugation_times.tenminutes: pause(10*60*1000);
+        case centrifugation_times.thirtyminutes: pause(30*60*1000);
+        case centrifugation_times.onehour: pause(60*60*1000);
+    }
+    pins.D13.servoWrite(0)
 }
 
 //% block="Start the centrifuge" blockGap=8
