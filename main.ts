@@ -40,7 +40,7 @@ function pause(ms: number): void {
  * @param value, eg: RPM.fiverpm
  * @param time, eg: centrifugation_times.tenseconds
  */
-//% block="Run the centrifugue at %value during" blockGap=8
+//% block="Run the centrifugue at %value during %time" blockGap=8
 //% weight=100 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
 
