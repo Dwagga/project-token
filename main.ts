@@ -9,7 +9,7 @@ enum RPM {
     twelverpm
 }
 
-enum centrifugation_times{
+enum centrifugation_times {
     //% block="10 seconds"
     tenseconds,
     //% block="20 seconds"
@@ -56,21 +56,13 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     }
     
     switch(value) {
-        case RPM.fiverpm:
-            pins.D13.servoWrite(110)
-        ;
-        case RPM.eigthrpm: 
-            pins.D13.servoWrite(120);
-        ;
-        case RPM.tenrpm: 
-            pins.D13.servoWrite(130);
-        ;
-        case RPM.twelverpm: 
-            pins.D13.servoWrite(140);   
-        ;         
+        case RPM.fiverpm: pins.D13.servoWrite(110);
+        case RPM.eigthrpm: pins.D13.servoWrite(120);
+        case RPM.tenrpm: pins.D13.servoWrite(130);
+        case RPM.twelverpm: pins.D13.servoWrite(140);   
     }
-    
-    pause(cent_time_sec);
+    pause(5000);
+    pins.D13.servoWrite(0);
 }
 
 //% block="Start the centrifuge" blockGap=8
