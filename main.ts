@@ -50,9 +50,9 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     }
     
     switch(time) {
-        case centrifugation_times.tenseconds: pause(10*1000);
-        case centrifugation_times.twentiseconds: pause(20*1000);
-        case centrifugation_times.thirtyseconds: pause(30*1000);
+        case centrifugation_times.tenseconds: pause(5000);
+        case centrifugation_times.twentiseconds: pause(201000);
+        case centrifugation_times.thirtyseconds: pause(301000);
         case centrifugation_times.oneminute: pause(1*60*1000);
         case centrifugation_times.twominutes: pause(2*60*1000);
         case centrifugation_times.fiveminutes: pause(5*60*1000);
