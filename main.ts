@@ -14,8 +14,8 @@ function pause(ms: number): void {
 
 
 //% block="Run the centrifugue at %value during" blockGap=8
-//% value.fieldEditor="numberdropdown" value.fieldOptions.decompileLiterals=false
-//% value.fieldOptions.values='[["3000 RPM"], ["5000 RPM"]]'
+//% value.fieldEditor="textdropdown"
+//% value.fieldOptions.values='hello','bye'
 //% weight=100 color=#FF5733
 export function run_centrifuge(value: string): void {
 
