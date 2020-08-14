@@ -1,8 +1,8 @@
-enum AlarmSound {
-    //% block="annoy"
-    Annoy,
-    //% block="alert"
-    Alert
+enum RPM {
+    //% block="5.000 RPM"
+    fiverpm,
+    //% block="8.000 RPM"
+    eigthrpm
 }
 
 //% weight=100 color=#FF5733 icon=\uf1ec
@@ -22,10 +22,9 @@ function pause(ms: number): void {
 
 /**
  * Play an alarm sound for some time
- * @param value of the alarm to play, eg: AlarmSound.Annoy
+ * @param value of the alarm to play, eg: RPM.fiverpm
  */
 //% block="Run the centrifugue at %value during" blockGap=8
-//% expandableArgumentMode="toggle"
 //% weight=100 color=#FF5733
 export function run_centrifuge(value?: AlarmSound): void {
 
