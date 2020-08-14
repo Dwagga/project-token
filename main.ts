@@ -26,7 +26,7 @@ function pause(ms: number): void {
  */
 //% block="Run the centrifugue at %value during" blockGap=8
 //% weight=100 color=#FF5733
-export function run_centrifuge(value?: AlarmSound): void {
+export function run_centrifuge(value?: RPM): void {
 
   //pins.D13.servoWrite(value)
 }
