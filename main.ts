@@ -2,7 +2,22 @@ enum RPM {
     //% block="5.000 RPM"
     fiverpm,
     //% block="8.000 RPM"
-    eigthrpm
+    eigthrpm,
+    //% block="10.000 RPM"
+    tenrpm,
+    //% block="12.000 RPM"
+    twelverpm
+}
+
+enum centrifugation_times{
+    //% block="10 seconds"
+    tenseconds,
+    //% block="20 seconds"
+    twentiseconds,
+    //% block="30 seconds"
+    thirtyseconds,
+    //% block="1 minute"
+    oneminute
 }
 
 //% weight=100 color=#FF5733 icon=\uf1ec
@@ -22,11 +37,12 @@ function pause(ms: number): void {
 
 /**
  * Play an alarm sound for some time
- * @param value of the alarm to play, eg: RPM.fiverpm
+ * @param value, eg: RPM.fiverpm
+ * @param time, eg: centrifugation_time.tenseconds
  */
 //% block="Run the centrifugue at %value during" blockGap=8
 //% weight=100 color=#FF5733
-export function run_centrifuge(value?: RPM): void {
+export function run_centrifuge(value: RPM, time: centrifugation_time): void {
 
   //pins.D13.servoWrite(value)
 }
