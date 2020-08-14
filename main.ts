@@ -44,15 +44,15 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     
     var cent_time_sec: number;
     switch(time) {
-        case centrifugation_times.tenseconds: cent_time = (10*1000);
-        case centrifugation_times.twentiseconds: cent_time = (20*1000);
-        case centrifugation_times.thirtyseconds: cent_time = (30*1000);
-        case centrifugation_times.oneminute: cent_time = (1*60*1000);
-        case centrifugation_times.twominutes: cent_time = (2*60*1000);
-        case centrifugation_times.fiveminutes: cent_time = (5*60*1000);
-        case centrifugation_times.tenminutes: cent_time = (10*60*1000);
-        case centrifugation_times.thirtyminutes: cent_time = (30*60*1000);
-        case centrifugation_times.onehour: cent_time = (60*60*1000);
+        case centrifugation_times.tenseconds: cent_time_sec = (10*1000);
+        case centrifugation_times.twentiseconds: cent_time_sec = (20*1000);
+        case centrifugation_times.thirtyseconds: cent_time_sec = (30*1000);
+        case centrifugation_times.oneminute: cent_time_sec = (1*60*1000);
+        case centrifugation_times.twominutes: cent_time_sec = (2*60*1000);
+        case centrifugation_times.fiveminutes: cent_time_sec = (5*60*1000);
+        case centrifugation_times.tenminutes: cent_time_sec = (10*60*1000);
+        case centrifugation_times.thirtyminutes: cent_time_sec = (30*60*1000);
+        case centrifugation_times.onehour: cent_time_sec = (60*60*1000);
     }
     
     switch(value) {
