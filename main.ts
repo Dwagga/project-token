@@ -1,11 +1,11 @@
 enum RPM {
-    //% block="5.000 RPM"
-    fiverpm,
-    //% block="8.000 RPM"
-    eigthrpm,
-    //% block="10.000 RPM"
-    tenrpm,
     //% block="12.000 RPM"
+    fiverpm,
+    //% block="13.000 RPM"
+    eigthrpm,
+    //% block="14.000 RPM"
+    tenrpm,
+    //% block="15.000 RPM"
     twelverpm
 }
 
@@ -33,10 +33,17 @@ enum centrifugation_times {
 //% weight=100 color=#FF5733 icon=\uf1ec
 namespace centrifuge {
 
+//% block="Start the centrifuge" blockGap=8
+//% weight=100 color=#FFA533
+export function Start_centrifuge(): void {
+  pins.D13.servoSetPulse(1000)
+  pause(5000)
+}
+    
 /**
  * Play an alarm sound for some time
- * @param value, eg: RPM.fiverpm
- * @param time, eg: centrifugation_times.tenseconds
+ * @param value, centrifugation speed in RPM eg: RPM.fiverpm
+ * @param time, centrifugation time eg: centrifugation_times.tenseconds
  */
 //% block="Run the centrifugue at %value during %time" blockGap=8
 //% weight=500 color=#FF5733
@@ -88,13 +95,6 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
             ;
     }
     
-}
-
-//% block="Start the centrifuge" blockGap=8
-//% weight=100 color=#FFA533
-export function Start_centrifuge(): void {
-  pins.D13.servoSetPulse(1000)
-  pause(5000)
 }
   
 }
