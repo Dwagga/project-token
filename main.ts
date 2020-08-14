@@ -42,7 +42,7 @@ namespace centrifuge {
 //% weight=500 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     
-    var cent_time_sec: number;
+    /*var cent_time_sec: number;
     switch(time) {
         case centrifugation_times.tenseconds: cent_time_sec = 10;
         case centrifugation_times.twentiseconds: cent_time_sec = 20;
@@ -53,7 +53,7 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
         case centrifugation_times.tenminutes: cent_time_sec = 10;
         case centrifugation_times.thirtyminutes: cent_time_sec = 30;
         case centrifugation_times.onehour: cent_time_sec = 60;
-    }
+    }*/
     
     switch(value) {
         case RPM.fiverpm: pins.D13.servoWrite(110);
@@ -61,7 +61,7 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
         case RPM.tenrpm: pins.D13.servoWrite(130);
         case RPM.twelverpm: pins.D13.servoWrite(140);   
     }
-    pause(cent_time_sec);
+    pause(5000);
     pins.D13.servoWrite(0);
 }
 
