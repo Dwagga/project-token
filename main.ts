@@ -51,7 +51,7 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
 //% block="Start the centrifuge" blockGap=8
 //% weight=100 color=#FFA533
 export function Start_centrifuge(): void {
-  pins.D13.setServoPulseUs(1000)
+  pins.D13.servoSetPulse(1000)
   pause(5000)
 }
   
