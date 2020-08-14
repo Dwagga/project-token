@@ -58,19 +58,19 @@ export function run_centrifuge(value: RPM, time: centrifugation_times): void {
     switch(value) {
         case RPM.fiverpm:
             pins.D13.servoWrite(110)
-            pause(cent_time)
+            pause(cent_time_sec)
         ;
         case RPM.eigthrpm: 
             pins.D13.servoWrite(120);
-            pause(cent_time)
+            pause(cent_time_sec)
         ;
         case RPM.tenrpm: 
             pins.D13.servoWrite(130);
-            pause(cent_time)
+            pause(cent_time_sec)
         ;
         case RPM.twelverpm: 
             pins.D13.servoWrite(140);   
-            pause(cent_time)
+            pause(cent_time_sec)
         ;
     }
 }
