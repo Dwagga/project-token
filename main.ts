@@ -43,8 +43,14 @@ function pause(ms: number): void {
 //% block="Run the centrifugue at %value during %time" blockGap=8
 //% weight=500 color=#FF5733
 export function run_centrifuge(value: RPM, time: centrifugation_times): void {
-
-  //pins.D13.servoWrite(value)
+    switch(value) {
+        case RPM.fiverpm:
+            pins.D13.servoWrite(110)
+        ;
+        case RPM.eigthrpm: pins.D13.servoWrite(120);
+        case RPM.tenrpm: pins.D13.servoWrite(130);
+        case RPM.twelverpm: pins.D13.servoWrite(140);    
+    }
 }
   
 
