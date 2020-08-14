@@ -38,11 +38,11 @@ function pause(ms: number): void {
 /**
  * Play an alarm sound for some time
  * @param value, eg: RPM.fiverpm
- * @param time, eg: centrifugation_time.tenseconds
+ * @param time, eg: centrifugation_times.tenseconds
  */
 //% block="Run the centrifugue at %value during" blockGap=8
 //% weight=100 color=#FF5733
-export function run_centrifuge(value: RPM, time: centrifugation_time): void {
+export function run_centrifuge(value: RPM, time: centrifugation_times): void {
 
   //pins.D13.servoWrite(value)
 }
