@@ -14,8 +14,9 @@ function pause(ms: number): void {
 
 
 //% block="Run the centrifugue at %value during" blockGap=8
+//% value.shadow="nullvalue"
 //% value.fieldEditor="textdropdown"
-//% value.fieldOptions.values='hello','bye'
+//% value.fieldOptions.values=['hello','bye']
 //% weight=100 color=#FF5733
 export function run_centrifuge(value: string): void {
 
