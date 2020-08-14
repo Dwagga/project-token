@@ -13,13 +13,11 @@ function pause(ms: number): void {
 }
 
 
-//% block="Run the centrifugue at %value during %duration" blockGap=8
-//% duration.fieldEditor="textdropdown" duration.fieldOptions.decompileLiterals=true
-//% duration.fieldOptions.data='[["5 seconds", 4], ["10 seconds", 4]]'
-//% value.fieldEditor="textdropdown" value.fieldOptions.decompileLiterals=true
-//% value.fieldOptions.data='[["3000 RPM", 3], ["5000 RPM", 5]]'
+//% block="Run the centrifugue at %value during" blockGap=8
+//% value.fieldEditor="numberdropdown" value.fieldOptions.decompileLiterals=false
+//% value.fieldOptions.values='[["3000 RPM"], ["5000 RPM"]]'
 //% weight=100 color=#FF5733
-export function run_centrifuge(value: string, duration: string): void {
+export function run_centrifuge(value: string): void {
 
   //pins.D13.servoWrite(value)
 }
